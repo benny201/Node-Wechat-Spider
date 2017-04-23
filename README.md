@@ -2,7 +2,7 @@
 
 这个Repo是使用Node通过传送门爬取公众号微信文章。
 
-## 用到第三方库
+## 用到的第三方库
 * express
 * cheerio(Jquery的node实现)
 * superagent及其自带插件
@@ -37,6 +37,12 @@
 ## 效果
 ![MongoDB]()
 
+## 使用方法
+```javascript
+1. sudo npm install
+2. node index.js
+```
+
 ## To do list
-* 还需增加稳定性
+* 因为要持续跑在AWS, 还需增加稳定性
 * 接口通用性...
