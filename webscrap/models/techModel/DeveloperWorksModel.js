@@ -1,10 +1,10 @@
-var Chaoduanxiaochunjie = require('../lib/mongo').Chaoduanxiaochunjie;
+var DeveloperWorks = require('../../lib/mongo').DeveloperWorks;
 
 module.exports = {
 
   //create article
   create: function (article) {
-    return Chaoduanxiaochunjie.create(article);
+    return DeveloperWorks.create(article);
   },
 
   //get
@@ -13,19 +13,19 @@ module.exports = {
     if (articleId) {
       query.articleId = articleId;
     }
-    return Chaoduanxiaochunjie
+    return DeveloperWorks
       .find(query)
       .sort({ _id: -1 });
   },
   //checkArticles
   checkArticleById: function(articleId) {
-    return Chaoduanxiaochunjie
+    return DeveloperWorks
       .findOne({ articleId: articleId });
   },
 
   //increse pv
   increasePv: function(articleId) {
-    return Chaoduanxiaochunjie
+    return DeveloperWorks
       .update({ articleId: articleId }, { $inc: { pv: 1 } });
   }
 }

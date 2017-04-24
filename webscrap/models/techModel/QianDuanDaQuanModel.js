@@ -1,10 +1,10 @@
-var Linqikanpan = require('../lib/mongo').Linqikanpan;
+var QianDuanDaQuan = require('../../lib/mongo').QianDuanDaQuan;
 
 module.exports = {
 
   //create article
   create: function (article) {
-    return Linqikanpan.create(article);
+    return QianDuanDaQuan.create(article);
   },
 
   //get
@@ -13,19 +13,19 @@ module.exports = {
     if (articleId) {
       query.articleId = articleId;
     }
-    return Linqikanpan
+    return QianDuanDaQuan
       .find(query)
       .sort({ _id: -1 });
   },
   //checkArticles
   checkArticleById: function(articleId) {
-    return Linqikanpan
+    return QianDuanDaQuan
       .findOne({ articleId: articleId });
   },
 
   //increse pv
   increasePv: function(articleId) {
-    return Linqikanpan
+    return QianDuanDaQuan
       .update({ articleId: articleId }, { $inc: { pv: 1 } });
   }
 }

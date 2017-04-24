@@ -92,3 +92,18 @@ exports.Fandeyibiao = mongoose.model('Fandeyibiao', wechatSchema);
 exports.Gufengle = mongoose.model('Gufengle', wechatSchema);
 //Linqikanpan
 exports.Linqikanpan = mongoose.model('Linqikanpan', wechatSchema);
+
+
+//tech
+// DeveloperWorks http://chuansong.me/account/developerWorks
+exports.DeveloperWorks = mongoose.model('DeveloperWorks', wechatSchema);
+// GuoLin 郭霖 http://chuansong.me/account/guolin_blog
+exports.GuoLin = mongoose.model('GuoLin', wechatSchema);
+// QianDuanZaoDuKe 前端早读课 http://chuansong.me/account/FeZaoDuKe
+exports.QianDuanZaoDuKe = mongoose.model('QianDuanZaoDuKe', wechatSchema);
+// QianDuanDaQuan 前端大全 http://chuansong.me/account/FrontDev
+exports.QianDuanDaQuan = mongoose.model('QianDuanDaQuan', wechatSchema);
+// ThreeSixKe  http://chuansong.me/account/wow36kr
+exports.ThreeSixKe = mongoose.model('ThreeSixKe', wechatSchema);
+// HuLianWangPingLun 互联网评论 http://chuansong.me/account/italk007
+exports.HuLianWangPingLun = mongoose.model('HuLianWangPingLun', wechatSchema);

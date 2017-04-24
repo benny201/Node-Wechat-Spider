@@ -1,10 +1,10 @@
-var Caijingmeinv = require('../lib/mongo').Caijingmeinv;
+var QianDuanZaoDuKe = require('../../lib/mongo').QianDuanZaoDuKe;
 
 module.exports = {
 
   //create article
   create: function (article) {
-    return Caijingmeinv.create(article);
+    return QianDuanZaoDuKe.create(article);
   },
 
   //get
@@ -13,19 +13,19 @@ module.exports = {
     if (articleId) {
       query.articleId = articleId;
     }
-    return Caijingmeinv
+    return QianDuanZaoDuKe
       .find(query)
       .sort({ _id: -1 });
   },
   //checkArticles
   checkArticleById: function(articleId) {
-    return Caijingmeinv
+    return QianDuanZaoDuKe
       .findOne({ articleId: articleId });
   },
 
   //increse pv
   increasePv: function(articleId) {
-    return Caijingmeinv
+    return QianDuanZaoDuKe
       .update({ articleId: articleId }, { $inc: { pv: 1 } });
   }
 }

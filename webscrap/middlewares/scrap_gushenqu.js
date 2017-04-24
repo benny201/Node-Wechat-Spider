@@ -65,7 +65,8 @@ exports.fetchGuShen = function (url, model){
             model.create(articleEntity)
               .then(function (result) {
                 console.log(title);
-                console.log(content);
+                //console.log(content);
+                console.log("done 1");
               })
               .catch(function (err) {
                 errLength.push(myurl);
@@ -117,7 +118,7 @@ exports.fetchGuShen = function (url, model){
               var linkElem = $('.question_link');
 
 
-            	for(var i = 0; i < 5; i++) {
+            	for(var i = 0; i < 7; i++) {
                 var id = linkElem.eq(i).attr('href').slice(3);
             		var url= curPageUrl + id;
                 console.log(url);
